@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="CSS/cadastro.css">
+    <script>
+        function verificarSenha() {
+            var senha = document.getElementById("senha").value;
+
+            // Verifica se a senha atende aos requisitos mínimos
+            if (senha.length < 8 || !/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(senha) || !/[a-z]+/.test(senha) || !/[A-Z]+/.test(senha) || !/[0-9]+/.test(senha)) {
+                alert("A senha deve ter pelo menos 8 caracteres, incluir pelo menos um símbolo, uma letra minúscula, uma letra maiúscula e um número.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+<form action="cadastro.php" method="POST" onsubmit="return verificarSenha()">
+    <div class="main-cadastro">
+        <div class="left-cadastro">
+            <h1>Faça seu cadastro<br>E entre para nosso time</h1>
+            <img src="svg/sign-up-animate.svg" alt="cadastro">
+        </div>
+        <div class="right-cadastro">
+            <div class="card-cadastro">
+                <h1>Cadastrar-se</h1>
+                <div class="textfield">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" class="form-control" name="nome" placeholder="nome" required>
+                </div>
+                <div class="textfield">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" placeholder="email" required>
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" class="form-control" name="senha" placeholder="Senha" required>
+                </div>
+                <button type="submit" class="btn-concluido">Concluído</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+</body>
+</html>

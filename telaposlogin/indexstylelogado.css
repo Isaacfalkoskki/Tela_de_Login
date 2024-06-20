@@ -1,0 +1,139 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #514869;
+  }
+  
+  .left {
+    text-align: center;
+  }
+  
+  .center {
+    display: inline-block;
+    text-decoration: none;
+    font-family: "itim", cursive;
+    font-size: 27px;
+    color: #00ff88;
+    border: 8px solid #00ff88;
+    padding: 1px 15px;
+    border-radius: 16px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 0 0 29px #00ff88;
+    box-shadow: inset 0 0 7px #00ff88, 0 0 7px #00ff88;
+    position: relative;
+  }
+  
+  .right {
+    display: flex;
+  }
+  
+  .redes-sociais {
+    display: flex;
+    text-align: right;
+  }
+  
+  .redes-sociais img {
+    width: 40px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.400);
+    box-sizing: border-box;
+  }
+  
+  .redes-sociais img:hover {
+    border: 2px solid rgba(255, 255, 255, 0.637);
+    transform: translate(-3px, -3px);
+    box-shadow: 5px 5px 10px black;
+    transition: transform 0.5s, border 1s;
+  }
+  
+  .botao-sair {
+    background-color: #514869;
+    text-align: left;
+    display: inline-block;
+  }
+  
+  .botao-sair img {
+    width: 50px;
+    margin: 10px;
+    box-sizing: border-box;
+  }
+  
+  .botao-sair img:hover {
+    border: 2px solid #77ffc0;
+    transition: transform 0.5s, border;
+  }
+  
+  :root {
+    --text-color: #77ffc0;
+    font-family: "itim", cursive;
+    display: inline-block;
+    text-decoration: none;
+    font-family: "itim", cursive;
+    color: #00ff88;
+    border-radius: 16px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 0 0 29px #00ff88;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: "IM Fell English SC", serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  
+  .container {
+    position: fixed;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    width: 100%;
+    background: -webkit-linear-gradient(45deg, #000000 0%, #2f2841 100%, #2f2841 100%);
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  }
+  
+  svg {
+    width: 100rem;
+  }
+  
+  svg text {
+    font-size: 7rem;
+    stroke: 2;
+    letter-spacing: -4px;
+  }
+  
+  svg text.text-body {
+    stroke: var(--text-color);
+    animation: 4s infinite alternate motion-stroke;
+  }
+  
+  @keyframes motion-stroke {
+    0% {
+      fill: transparent;
+      stroke: var(--text-color);
+      stroke-width: 3;
+      stroke-dashoffset: 25%;
+      stroke-dasharray: 0 32%;
+    }
+  
+    50% {
+      fill: transparent;
+      stroke: var(--text-color);
+      stroke-width: 3;
+    }
+  
+    80%, 100% {
+      fill: var(--text-color);
+      stroke: transparent;
+      stroke-width: 0;
+      stroke-dashoffset: -25%;
+      stroke-dasharray: 32% 0;
+    }
+  }
